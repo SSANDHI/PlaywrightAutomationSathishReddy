@@ -19,6 +19,7 @@ async validateLoginPage(userName, password)
     await this.txt_Pwd.fill(password);
     await this.btn_Login.click();
      console.log(await this.page.title())
+     console.log("Title is: " + await this.page.title())
  await expect(this.page).toHaveTitle("Let's Shop")
 
 }
