@@ -1,3 +1,4 @@
+import './hooks.js';
 import { test,expect } from '@playwright/test';
 import { ALL } from 'node:dns';
 

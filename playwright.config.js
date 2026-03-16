@@ -14,6 +14,15 @@ export default defineConfig({
   reporter: 'html',
   use: {
     browserName: 'chromium',
+    headless: false,
+    screenshot: 'on',
+    video: 'on',   
+    trace: 'retain-on-failure',
+    channel: 'msedge',
+    viewport: null,
+    launchOptions: {
+      args: ['--start-maximized'],
+    },
   },
 });
 

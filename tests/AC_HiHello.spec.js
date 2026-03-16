@@ -1,3 +1,4 @@
+import './hooks.js';
 import { test, expect } from '@playwright/test';
 
 test('AC Hi Hello Test', async ({ page }) => {
