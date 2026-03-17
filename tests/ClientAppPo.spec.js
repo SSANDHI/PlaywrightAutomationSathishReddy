@@ -1,16 +1,13 @@
 import { test, expect } from '@playwright/test';
-import { LoginPage } from '../pages/PageObjects/LoginPage.js';
-import { DashBoard } from '../pages/PageObjects/DashBoard.js';
-import { CartPage } from '../pages/PageObjects/CartPage.js';
-import { PaymentPage } from '../pages/PageObjects/PaymentPage.js';
-import { OrderPage } from '../pages/PageObjects/OrderPage.js';
+import { POManager } from '../pages/PageObjects/POManager.js';
 
 test.only('Client App Playwright test', async ({ page }) => {
-    const loginPage = new LoginPage(page);
-    const dashboard = new DashBoard(page);
-    const cartPage = new CartPage(page);
-    const paymentPage = new PaymentPage(page);
-    const orderPage = new OrderPage(page);
+    const poManager = new POManager(page);
+    const loginPage = poManager.getLoginPage();
+    const dashboard = poManager.getDashBoard();
+    const cartPage = poManager.getCartPage();
+    const paymentPage = poManager.getPaymentPage();
+    const orderPage = poManager.getOrderPage();
 
     const userName = 'sandhi.019@gmail.com';
     const password = 'JobNeed@1234';
